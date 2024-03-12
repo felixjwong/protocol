@@ -69,5 +69,5 @@ Loading pretrained parameter "encoder.encoder.0.W_o.bias".
 Loading pretrained parameter "readout.1.weight".
 Loading pretrained parameter "readout.1.bias".
 smiles,score,rationale,rationale_score
-['CO[C@]1(NC(=O)C2SC(=C(C(=O)N)C(=O)O)S2)[C@H]2SCC(=C(N2C1=O)C(=O)O)CSc1nnnn1C'],0.955,O=C1N2[C@H](SC[CH:1]=[CH:1]2)[C:1]1,0.654
-Elapsed time = 5:56:44
+['CO[C@]1(NC(=O)C2SC(=C(C(=O)N)C(=O)O)S2)[C@H]2SCC(=C(N2C1=O)C(=O)O)CSc1nnnn1C'],0.511,Cn1nnnc1SCC1=C([CH:1]=O)N2[C@H](SC1)[C:1][CH2:1]2,0.500
+Elapsed time = 0:22:02
