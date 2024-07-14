@@ -45,10 +45,12 @@ The files in this repository allow for repeat analyses of those described in the
 </ul>
 Typical installation times range from minutes to hours. Details on installation and the packages required are provided in the protocol.
 
+For running the computational steps provided in the accompanying Jupyter notebook ("Tutorial.ipynb"), refer to the "requirements.txt" file in this repository for Python packages required and corresponding version numbers. 
+
 <!-- Aims -->
 ## Aims
 
-The accompanying protocol presents an explainable deep learning platform that enables vast chemical spaces to be mined and the chemical substructures underlying predicted activity to be identified. The platform relies on Chemprop, a software package implementing graph neural networks as a deep learning model architecture. Focusing on discovering structural classes of antibiotics, the protocol provides guidelines for experimental data generation, model implementation, and model explainability and evaluation. The protocol does not require coding proficiency or specialized hardware, and it can be executed in as little as 1-2 weeks, starting from data generation and ending in the testing of model predictions. The platform can be broadly applied to discover structural classes of other small molecules, including anti-cancer, anti-viral, and senolytic drugs, as well as to discover structural classes of inorganic molecules with desired physical and chemical properties. 
+The accompanying protocol presents an explainable deep learning platform that enables vast chemical spaces to be mined and the chemical substructures underlying predicted activity to be identified. The platform relies on Chemprop, a software package implementing graph neural networks as a deep learning model architecture. In contrast to similar approaches, graph neural networks have been shown to be state-of-the-art for molecular property prediction. Focusing on discovering structural classes of antibiotics, the protocol provides guidelines for experimental data generation, model implementation, and model explainability and evaluation. The protocol does not require coding proficiency or specialized hardware, and it can be executed in as little as 1-2 weeks, starting from data generation and ending in the testing of model predictions. The platform can be broadly applied to discover structural classes of other small molecules, including anti-cancer, anti-viral, and senolytic drugs, as well as to discover structural classes of inorganic molecules with desired physical and chemical properties. 
 
 
 <!-- GETTING STARTED -->
@@ -62,22 +64,27 @@ Each of the folders entitled "sa_models", "hep_models", "hskmc_models", and "imr
 
 The protocol guides readers to train and deploy their own Chemprop models. Successful execution of the protocol should result in files similar to those in this repository. This repository is provided in order to further guide readers in navigating the protocol. 
 
+### Computational steps
+
+This repository provides a Jupyter notebook file, "Tutorial.ipynb", for running all computational steps described in the protocol. Execute each cell in this notebook in sequence, and note the dependencies on different files in this repository. 
+
 ### Key files
 
 Key files are detailed as part of the protocol, but it is helpful to note the following: 
 
 <ul>
+<li>Tutorial.ipynb: a Jupyter notebook file executing the computational steps described in the protocol using the files provided as part of this repository.</li>
 <li>models/train.csv: A CSV file containing the SMILES strings and activity values of compounds in the training set. The default files provided are training sets of 2,335 compounds, which are a subset of the screening data <a href="https://www.nature.com/articles/s41586-023-06887-8">originally published in our work</a>. These files, one each for antibiotic activity against <i>Staphylococcus aureus</i>, cytotoxicity against HepG2 cells, cytotoxicity against human primary skeletal muscle cells, and cytotoxicity against IMR-90 cells, correspond to Supplementary Datasets 1-4 in the protocol. 
 </li>
 <li>models/hyperparameters.json: A JSON file containing key hyperparameters specifying the architectures of the Chemprop models used. 
 </li>
-<li>test.csv: A CSV file containing the SMILES strings of 99,999 compounds from the Broad Institute's 800K database, for which Chemprop predictions will be made. This file corresponds to Supplementary Dataset 5 in the protocol. 
+<li>test.csv: A CSV file containing the SMILES strings of 100,000 compounds from the Broad Institute's 800K database, for which Chemprop predictions will be made. This file corresponds to Supplementary Dataset 5 in the protocol. 
 </li>
 <li>test_results: A CSV file containing the results from running chemprop_predict on test.csv using the models in "sa_models".
 </li>
-<li>hit.csv: A CSV file containing a single SMILES string with a high antibiotic prediction score and a rationale that can be calculated. 
+<li>examples.csv: A CSV file containing a single SMILES string with a high antibiotic prediction score and a rationale that can be calculated. 
 </li>
-<li>hits_rationales: A CSV file containing the results from running chemprop_interpret on hit.csv using the models in "sa_models".
+<li>examples_rationales: A CSV file containing the results from running chemprop_interpret on hit.csv using the models in "sa_models".
 </li>
 <li>environment.yml: A file listing the Python dependencies needed for successful installation of Chemprop. 
 </li>
