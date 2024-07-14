@@ -43,9 +43,7 @@ The files in this repository allow for repeat analyses of those described in the
 <li><a href="https://github.com/chemprop/chemprop">Chemprop</a> (commit 2bcfcfe47b704d73ce7c48f177254fedeb5c0316 was used)</li>
 <li><a href="https://www.rdkit.org/">RDKit</a> (version 2023.09.6 was used)</li>
 </ul>
-Typical installation times range from minutes to hours. Details on installation and the packages required are provided in the protocol.
-
-For running the computational steps provided in the accompanying Jupyter notebook ("Tutorial.ipynb"), refer to the "requirements.txt" file in this repository for Python packages required and corresponding version numbers. 
+Typical installation times range from minutes to hours. Details on installation and the packages required are provided in the protocol. For running the computational steps provided in the accompanying Jupyter notebook ("tutorial.ipynb"), refer to the "requirements.txt" file in this repository for the Python packages required and corresponding version numbers. 
 
 <!-- Aims -->
 ## Aims
@@ -66,14 +64,14 @@ The protocol guides readers to train and deploy their own Chemprop models. Succe
 
 ### Computational steps
 
-This repository provides a Jupyter notebook file, "Tutorial.ipynb", for running all computational steps described in the protocol. Execute each cell in this notebook in sequence, and note the dependencies on different files in this repository. 
+This repository provides a Jupyter notebook file, "tutorial.ipynb", for running all computational steps described in the protocol. Execute each cell in this notebook in sequence, and note the dependencies on different files in this repository. 
 
 ### Key files
 
 Key files are detailed as part of the protocol, but it is helpful to note the following: 
 
 <ul>
-<li>Tutorial.ipynb: a Jupyter notebook file executing the computational steps described in the protocol using the files provided as part of this repository.</li>
+<li>tutorial.ipynb: a Jupyter notebook file executing the computational steps described in the protocol using the files provided as part of this repository.</li>
 <li>models/train.csv: A CSV file containing the SMILES strings and activity values of compounds in the training set. The default files provided are training sets of 2,335 compounds, which are a subset of the screening data <a href="https://www.nature.com/articles/s41586-023-06887-8">originally published in our work</a>. These files, one each for antibiotic activity against <i>Staphylococcus aureus</i>, cytotoxicity against HepG2 cells, cytotoxicity against human primary skeletal muscle cells, and cytotoxicity against IMR-90 cells, correspond to Supplementary Datasets 1-4 in the protocol. 
 </li>
 <li>models/hyperparameters.json: A JSON file containing key hyperparameters specifying the architectures of the Chemprop models used. 
